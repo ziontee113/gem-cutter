@@ -1,10 +1,14 @@
+local m = require("gem-cutter")
+
 describe("test_spec", function()
 	it("works", function()
-		assert.equals(1, 1)
-	end)
+		local input = [[
+<div>Hello World!</div>
+        ]]
 
-	it("breaks", function()
-		assert.equals(2, 2)
-		-- assert.equals(1, 2)
+		local want = "Hello World!"
+		local got = m.extract(input)
+
+		assert.equals(want, got)
 	end)
 end)

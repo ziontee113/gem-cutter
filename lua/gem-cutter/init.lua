@@ -1,5 +1,7 @@
 local M = {}
 
-N("hello from Gem Cutter")
+M.extract = function(input)
+	-- TODO:
+end
 
 return M
